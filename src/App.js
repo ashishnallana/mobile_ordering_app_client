@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import MobilePage from "./pages/MobilePage";
+import SearchPage from "./pages/SearchPage";
+import Navbar from "./components/Navbar";
+import { useStateValue } from "./StateProvider";
+import Cart from "./components/Cart";
+import { useEffect } from "react";
 
 function App() {
+  const [{ showCart }, dispatch] = useStateValue();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Router>
+        <Navbar />
+        {showCart && <Cart />}
+        <Routes>
+          <Route path="/" Component={Home} />
+          <Route path="/search" Component={SearchPage} />
+          <Route path="/mobile" Component={MobilePage} />
+        </Routes>
+      </Router>
     </div>
   );
 }
