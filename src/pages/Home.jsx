@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Images = [
   "https://www.apple.com/newsroom/images/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/article/Apple-iPhone-15-Pro-lineup-hero-230912_Full-Bleed-Image.jpg.large.jpg",
-  "https://www.allround-pc.com/wp-content/uploads/2023/08/Samsung-Galaxy-Z-Flip-5-Foldable-faltbares-Smartphone-One-UI-5-Android-13-Software-Test-Review-2-1.jpg",
+  "https://media.gq-magazine.co.uk/photos/6311d3dc674662a71cdbeb64/16:9/w_2560%2Cc_limit/FLIP_HP.jpg",
   "https://i.gadgets360cdn.com/large/iqoo_12_funtouch_os_14_iqoo_1700735088567.jpg",
 ];
 
